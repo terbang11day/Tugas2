@@ -52,6 +52,8 @@
 
 ** Note 
 
+    * http://127.0.0.1:8000/main/ tautan menuju tampilan web
+    * http://127.0.0.1:8000/admin/ tautan menuju databse
     * terdapat penambahan tescase yaitu apakah suatu data terdapat pada laman web tersebut
     * Visualisasi Database dalam bentuk tabel kepad client sehingga mudah dibaca
     * Pengelolaan database pada bentuk admin, web diakses dengan /admin pada bagian belakangnya
