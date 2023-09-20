@@ -3,13 +3,13 @@
 {% block content %}
 <h1><b><center>Stok Produk Toko-ku</center></b></h1>
 
-<h5>Name:</h5>
-<p>{{ name }}</p>
+    <h5>Name:</h5>
+    <p>{{name}}</p>
 
-<h5>Class:</h5>
-<p>{{ class }}</p>
+    <h5>Class:</h5>
+    <p>{{class}}</p>
 
-{% if products %}
+    {% if products %}
     <p>Kamu menyimpan {{ products|length }} item pada aplikasi ini</p>
     <table width="90%" border="1" cellspacing="0">
         <tr>
@@ -30,13 +30,13 @@
 {% else %}
     <p>Tidak ada item yang disimpan pada aplikasi ini.</p>
 {% endif %}
-
-<br />
-
-<a href="{% url 'main:create_product' %}">
-    <button>
-        Add New Product
-    </button>
-</a>
-
-{% endblock content %}
+    
+    <br />
+    
+    <a href="{% url 'main:create_product' %}">
+        <button>
+            Add New Product
+        </button>
+    </a>
+    
+    {% endblock content %}
