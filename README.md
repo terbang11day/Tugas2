@@ -111,7 +111,8 @@ TUGAS 2
     *Buat fungsi show_xml_by_id dan show_json_by_id di views.py untuk menampilkan XML dan JSON berdasarkan ID.
     *Tambahkan URL 'xml/int:id/' dan 'json/int:id/' di urls.py untuk menampilkan XML dan JSON berdasarkan ID yang diminta.
 
-5. ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/html.png?raw=true)
+5.  SS Postman
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/html.png?raw=true)
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json.png?raw=true)
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json_id.png)?raw=true)
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml.png?raw=true)
