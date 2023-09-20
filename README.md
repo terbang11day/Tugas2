@@ -113,9 +113,9 @@ TUGAS 2
 
 5. ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/html.png?raw=true)
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json.png?raw=true)
-   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json_1.png?raw=true)
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json_id.png?raw=true)
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml.png?raw=true)
-   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml_1.png?raw=true)
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml_id.png?raw=true)
 
 
 
