@@ -59,3 +59,63 @@
     * Pengelolaan database pada bentuk admin, web diakses dengan /admin pada bagian belakangnya
 
 
+TUGAS 2 
+
+1. Apa perbedaan antara form POST dan form GET dalam Django?
+    *Form GET:
+        Data dari form terlihat di alamat URL.
+        Digunakan untuk mengambil informasi dari server, seperti pencarian.
+
+    *Form POST:
+        Data dari form tidak terlihat di alamat URL.
+        Digunakan untuk mengirim data pribadi atau melakukan perubahan di server, seperti mengirim pesan atau mengisi formulir.
+    
+2. Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+
+    *XML (eXtensible Markup Language):
+        Digunakan untuk menyimpan dan mentransfer data.
+        Formatnya sangat struktural dengan tag yang mendefinisikan data.
+        Lebih fleksibel tetapi lebih berat daripada JSON dan HTML.
+        Umumnya digunakan dalam pertukaran data antar sistem.
+        
+    #JSON (JavaScript Object Notation):
+        Digunakan untuk menyimpan dan mentransfer data.
+        Formatnya ringkas dan mudah dibaca oleh manusia.
+        Biasanya digunakan dalam pengembangan aplikasi web dan layanan web (API).
+        
+    *HTML (HyperText Markup Language):
+        Digunakan untuk membuat tampilan halaman web dan struktur konten.
+        Berfokus pada representasi visual dan interaktivitas di dalam browser web.
+        Tidak digunakan untuk pengiriman data, melainkan untuk menampilkan konten dan mengatur tampilan halaman web.
+
+3. Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+
+    *Formatnya ringkas dan mudah dibaca oleh manusia.
+    *Mendukung struktur data yang fleksibel dan kompleks, seperti objek dan larik bersarang.
+    *Kompatibel dengan bahasa pemrograman yang umum digunakan, sehingga mudah diolah oleh aplikasi.
+    *Cocok untuk pengembangan aplikasi web dan layanan web (API) karena memudahkan pertukaran data antara klien dan server.
+    *Dukungan browser web terintegrasi untuk parsing JSON memudahkan komunikasi asinkron antara browser dan server.
+
+4. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step
+
+    Hal-hal yang saya lakukan untuk menyelesaikan tugas ini adalah :
+
+    *Buat file forms.py untuk membuat form input data baru (ItemForm).
+    *Buat file HTML create_product.html untuk menampilkan form input data.
+    *Buat fungsi create_product di views.py untuk menampilkan form, memvalidasi input, dan menyimpan data.
+    *Untuk bonus, gunakan Item.objects.count() untuk menghitung jumlah item dan Item.objects.all() untuk mendapatkan semua item dan menghitung total amount.
+    *Tambahkan tombol di home.html untuk menuju halaman pengisian form dan tampilkan jumlah item dan total amount di sana.
+    *Konfigurasi URL di urls.py untuk mengarahkan URL 'create_product/' ke fungsi create_product di views.py.
+    *Buat fungsi show_xml dan show_json di views.py untuk menghasilkan file XML dan JSON dari data Item.
+    *Tambahkan URL 'xml/' dan 'json/' di urls.py untuk menampilkan file XML dan JSON.
+    *Buat fungsi show_xml_by_id dan show_json_by_id di views.py untuk menampilkan XML dan JSON berdasarkan ID.
+    *Tambahkan URL 'xml/int:id/' dan 'json/int:id/' di urls.py untuk menampilkan XML dan JSON berdasarkan ID yang diminta.
+
+5. 
+
+
+
+
+
+
+
