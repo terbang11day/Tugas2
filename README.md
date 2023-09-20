@@ -103,7 +103,6 @@ TUGAS 2
     *Buat file forms.py untuk membuat form input data baru (ItemForm).
     *Buat file HTML create_product.html untuk menampilkan form input data.
     *Buat fungsi create_product di views.py untuk menampilkan form, memvalidasi input, dan menyimpan data.
-    *Untuk bonus, gunakan Item.objects.count() untuk menghitung jumlah item dan Item.objects.all() untuk mendapatkan semua item dan menghitung total amount.
     *Tambahkan tombol di home.html untuk menuju halaman pengisian form dan tampilkan jumlah item dan total amount di sana.
     *Konfigurasi URL di urls.py untuk mengarahkan URL 'create_product/' ke fungsi create_product di views.py.
     *Buat fungsi show_xml dan show_json di views.py untuk menghasilkan file XML dan JSON dari data Item.
@@ -111,7 +110,11 @@ TUGAS 2
     *Buat fungsi show_xml_by_id dan show_json_by_id di views.py untuk menampilkan XML dan JSON berdasarkan ID.
     *Tambahkan URL 'xml/int:id/' dan 'json/int:id/' di urls.py untuk menampilkan XML dan JSON berdasarkan ID yang diminta.
 
-5. 
+5. ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/html.png?raw=true)
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json.png?raw=true)
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json_id.png)?raw=true)
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml.png?raw=true)
+   ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml_id.png?raw=true)
 
 
 
