@@ -142,7 +142,10 @@
 
 5.  SS Postman
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/html.png)?raw=true)
+<<<<<<< HEAD
 
+=======
+>>>>>>> abfe070930663428f1c0ae3fc77b3a404c8fe9e3
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json.png?raw=true)
 
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/json_id.png)?raw=true)
