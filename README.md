@@ -2,7 +2,8 @@
 
 **Daftar isi :**<br/>
 [Tugas 2](#tugas-2)<br/>
-[Tugas 3](#tugas-3)
+[Tugas 3](#tugas-3)<br/>
+[Tugas 4](#tugas-4)<br/>
 
 **Thariq Ziyad Al Farizi**<br/>
 **2206082865**<br/>
@@ -153,6 +154,50 @@
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml.png?raw=true)
    
    ![alt text](https://github.com/terbang11day/Tugas2/blob/main/dok/xml_id.png?raw=true)
+
+
+# **Tugas 4**
+
+1. Apa itu Django `UserCreationForm`, dan jelaskan apa kelebihan dan kekurangannya?
+
+    Django UserCreationForm adalah salah satu formulir bawaan yang disediakan oleh Django untuk mengelola proses pendaftaran pengguna (user registration). Formulir ini memudahkan pengembang web untuk membuat halaman pendaftaran dengan fitur validasi dan penyimpanan data pengguna ke dalam database. Kelebihan dari menggunakan UserCreationForm adalah kemudahan penggunaannya dan integrasi yang baik dengan sistem otentikasi Django. Namun, kekurangannya adalah kurangnya kustomisasi yang dapat dilakukan secara langsung, sehingga mungkin memerlukan penyesuaian tambahan jika Anda memiliki kebutuhan yang sangat khusus.
+
+2. Apa perbedaan antara `autentikasi` dan `otorisasi` dalam konteks Django, dan mengapa keduanya penting?
+
+    ```Autentikasi```: Autentikasi adalah proses verifikasi identitas pengguna. Dalam konteks Django, ini berarti memastikan bahwa seseorang yang mencoba mengakses aplikasi web Anda adalah pengguna yang sah dan telah terautentikasi (misalnya, dengan username dan password). Django menyediakan sistem otentikasi bawaan yang dapat mengelola autentikasi pengguna dengan aman.
+
+    ```Otorisasi``` Otorisasi adalah proses yang menentukan apa yang dapat dilakukan oleh pengguna yang telah terautentikasi. Ini adalah langkah selanjutnya setelah autentikasi. Django memiliki sistem otorisasi yang memungkinkan Anda untuk mengatur izin akses pengguna ke berbagai bagian aplikasi Anda. Misalnya, seorang pengguna yang terautentikasi mungkin memiliki izin untuk mengedit profilnya sendiri, tetapi tidak memiliki izin untuk mengedit profil pengguna lain.
+
+3. Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+
+    Cookies adalah kecil berkas data yang disimpan di sisi klien (browser) yang digunakan untuk menyimpan informasi sesi atau preferensi pengguna. Dalam aplikasi web, cookies dapat digunakan untuk mengelola sesi pengguna, seperti menyimpan ID sesi atau mengingat preferensi pengguna.
+
+    Django menggunakan cookies untuk mengelola sesi pengguna. Secara default, Django menyimpan ID sesi pengguna dalam cookie. Ini memungkinkan Django untuk mengidentifikasi pengguna yang telah terautentikasi dan menjaga status sesi mereka.
+
+    Penggunaan cookies dalam pengembangan web dapat menjadi aman jika diimplementasikan dengan benar. Namun, ada beberapa risiko potensial yang harus diwaspadai:
+
+
+
+4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+
+    `Cross-Site Scripting (XSS)` Penyerang dapat mencoba menyisipkan skrip berbahaya ke dalam cookie, yang akan dieksekusi oleh browser pengguna.
+
+    `Cross-Site Request Forgery (CSRF)`Serangan CSRF dapat memanipulasi tindakan yang diambil oleh pengguna yang telah terotentikasi dalam aplikasi web dengan menggunakan cookie mereka.
+
+    `Penyadapa` Cookies bisa dicuri jika tidak dienkripsi dengan baik atau jika ada celah keamanan dalam aplikasi.
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+    *Buat model Item dan User dalam aplikasi Anda. Pastikan Anda menentukan relasi antara keduanya, misalnya dengan menggunakan ForeignKey untuk menghubungkan setiap item dengan pengguna yang membuatnya.
+
+    *Buat migrasi untuk model Anda dengan perintah python manage.py makemigrations dan terapkan migrasi tersebut dengan python manage.py migrate.
+
+    *Buat skrip manajemen khusus untuk membuat tiga dummy data untuk masing-masing akun pengguna. Anda dapat menggunakan User.objects.create_user untuk membuat pengguna dan Item.objects.create untuk membuat item terkait.
+
+
+
+
+
 
 
 
