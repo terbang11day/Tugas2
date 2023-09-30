@@ -5,9 +5,78 @@
 {% endblock meta %}
 
 {% block content %}
+<style>
+    body {
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
 
-<div class = "login">
+    .login {
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center; 
+    }
 
+    h1 {
+        color: #007BFF;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    input.form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 3px;
+    }
+
+    .btn.login_btn {
+        background-color: #007BFF;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 10px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+
+    .btn.login_btn:hover {
+        background-color: #0056b3;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        color: #ff0000; 
+    }
+
+    .register-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="login">
     <h1>Login</h1>
 
     <form method="POST" action="">
@@ -38,8 +107,9 @@
         </ul>
     {% endif %}     
         
-    Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
-
+    <div class="register-link">
+        Don't have an account yet? <a href="{% url 'main:register' %}">Register Now</a>
+    </div>
 </div>
 
 {% endblock content %}

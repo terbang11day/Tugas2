@@ -17,7 +17,7 @@ def show_main(request):
 
     context = {
         'name' : request.user.username,
-        'class' : 'PBP - C',
+        'class' : 'PBP B ',
         'products' : products,
         'last_login' : request.COOKIES['last_login'],
     }

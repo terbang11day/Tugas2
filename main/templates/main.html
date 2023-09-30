@@ -1,50 +1,112 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
 
-{% block content %}
-<h1><b><center>Stok Produk Toko-ku</center></b></h1>
+        h1 {
+            color: #007BFF;
+            font-size: 36px;
+            text-align: center;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h5 {
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Add a different background color to the last row */
+        table tr:last-child {
+            background-color: #3884d4; /* You can replace this color with your desired color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Shopping List Page</h1>
 
     <h5>Name:</h5>
     <p>{{name}}</p>
 
     <h5>Class:</h5>
     <p>{{class}}</p>
-    
-    <h5>Sesi terakhir login: {{ last_login }}</h5>
 
-    {% if products %}
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+            <th>Description</th>
+        </tr>
+
+        <!-- Berikut cara memperlihatkan data produk di bawah baris ini -->
         <p>Kamu menyimpan {{ products|length }} item pada aplikasi ini</p>
-    <table width="90%" border="1" cellspacing="0">
-        <tr>
-            <th>Nama Produk</th>
-            <th>Harga</th>
-            <th>Jumlah</th>
-            <th>Stok Tersedia</th>
-        </tr>
         {% for product in products %}
-        <tr>
-            <td><center>{{ product.name }}</center></td>
-            <td><center>{{ product.price }}</center></td>
-            <td><center>{{ product.amount }}</center></td>
-            <td><center>{{ product.stock }}</center></td>
-        </tr>
+            <tr>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.stock}}</td>
+                <td>{{product.description}}</td>
+            </tr>
         {% endfor %}
     </table>
-{% else %}
-    <p>Tidak ada item yang disimpan pada aplikasi ini.</p>
-{% endif %}
-    
-    <br />
-    
-    <a href="{% url 'main:create_product' %}">
-        <button>
-            Add New Product
-        </button>
-    </a>
 
-    <a href="{% url 'main:logout' %}">
-        <button>
-            Logout
-        </button>
-    </a>
-    
-    {% endblock content %}
+    <h5>Sesi terakhir login: {{ last_login }}</h5>
+
+    <br />
+
+    <div class="button-container">
+        <a href="{% url 'main:create_product' %}" class="button">Add New Product</a>
+        <a href="{% url 'main:logout' %}" class="button">Logout</a>
+    </div>
+</body>
+</html>
