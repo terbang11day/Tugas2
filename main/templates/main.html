@@ -65,9 +65,8 @@
             background-color: #0056b3;
         }
 
-        /* Add a different background color to the last row */
         table tr:last-child {
-            background-color: #3884d4; /* You can replace this color with your desired color */
+            background-color: #3884d4; 
         }
     </style>
 </head>
@@ -88,7 +87,7 @@
             <th>Description</th>
         </tr>
 
-        <!-- Berikut cara memperlihatkan data produk di bawah baris ini -->
+    
         <p>Kamu menyimpan {{ products|length }} item pada aplikasi ini</p>
         {% for product in products %}
             <tr>
