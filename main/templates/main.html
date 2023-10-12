@@ -72,6 +72,7 @@
             background-color: #0056b3;
         }
 
+<<<<<<< HEAD
         .last-login {
             text-align: center;
         }
@@ -83,6 +84,10 @@
             font-weight: bold;
             text-align: center;
             margin-top: 20px;
+=======
+        table tr:last-child {
+            background-color: #3884d4; 
+>>>>>>> 8f3a60c0b423cfb19585f636fa02d8da238ef4fd
         }
     </style>
     <script>
@@ -135,7 +140,12 @@
 
     <div class="total-items">Kamu menyimpan {{ products|length }} item pada aplikasi ini</div>
 
+<<<<<<< HEAD
     <div class="card-container">
+=======
+    
+        <p>Kamu menyimpan {{ products|length }} item pada aplikasi ini</p>
+>>>>>>> 8f3a60c0b423cfb19585f636fa02d8da238ef4fd
         {% for product in products %}
             <div class="card">
                 <h3>{{product.name}}</h3>
