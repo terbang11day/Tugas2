@@ -20,20 +20,27 @@
             margin-top: 20px;
         }
 
-        table {
-            border-collapse: collapse;
+        .card-container {
             width: 80%;
             margin: 20px auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
-        th, td {
+        .card {
             border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            flex: 0 0 calc(33.33% - 20px);
+            max-width: calc(33.33% - 20px);
+            box-sizing: border-box;
         }
 
-        th {
-            background-color: #f2f2f2;
+        .card h3 {
+            color: #007BFF;
         }
 
         p {
@@ -65,11 +72,57 @@
             background-color: #0056b3;
         }
 
-        /* Add a different background color to the last row */
-        table tr:last-child {
-            background-color: #3884d4; /* You can replace this color with your desired color */
+        .last-login {
+            text-align: center;
+        }
+
+        .total-items {
+            background-color: #3884d4;
+            padding: 10px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
         }
     </style>
+    <script>
+        async function getProducts() {
+            return fetch("{% url 'main:get_product_json' %}").then((res) => res.json())
+        }
+        async function refreshProducts() {
+        document.getElementById("product_table").innerHTML = ""
+        const products = await getProducts()
+        let htmlString = `<tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Date Added</th>
+        </tr>`
+        products.forEach((item) => {
+            htmlString += `\n<tr>
+            <td>${item.fields.name}</td>
+            <td>${item.fields.price}</td>
+            <td>${item.fields.description}</td>
+            <td>${item.fields.date_added}</td>
+        </tr>` 
+        })
+        
+        document.getElementById("product_table").innerHTML = htmlString
+    }
+
+    refreshProducts()
+
+    function addProduct() {
+        fetch("{% url 'main:add_product_ajax' %}", {
+            method: "POST",
+            body: new FormData(document.querySelector('#form'))
+        }).then(refreshProducts)
+
+        document.getElementById("form").reset()
+        return false
+    }
+    document.getElementById("button_add").onclick = addProduct
+    </script>
 </head>
 <body>
     <h1>Shopping List Page</h1>
@@ -80,33 +133,27 @@
     <h5>Class:</h5>
     <p>{{class}}</p>
 
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th></th>
-            <th>Description</th>
-        </tr>
+    <div class="total-items">Kamu menyimpan {{ products|length }} item pada aplikasi ini</div>
 
-        <!-- Berikut cara memperlihatkan data produk di bawah baris ini -->
-        <p>Kamu menyimpan {{ products|length }} item pada aplikasi ini</p>
+    <div class="card-container">
         {% for product in products %}
-            <tr>
-                <td>{{product.name}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.stock}}</td>
-                <td>{{product.description}}</td>
-            </tr>
+            <div class="card">
+                <h3>{{product.name}}</h3>
+                <p>Price: {{product.price}}</p>
+                <p>Stock: {{product.stock}}</p>
+                <p>Description: {{product.description}}</p>
+            </div>
         {% endfor %}
-    </table>
+    </div>
 
-    <h5>Sesi terakhir login: {{ last_login }}</h5>
-
-    <br />
+    <div class="last-login">
+        <h5>Sesi terakhir login: {{ last_login }}</h5>
+    </div>
 
     <div class="button-container">
-        <a href="{% url 'main:create_product' %}" class="button">Add New Product</a>
+        <a href="{% url 'main:create_product' %}" class="button">Add Product by AJAX</a>
         <a href="{% url 'main:logout' %}" class="button">Logout</a>
     </div>
+
 </body>
 </html>

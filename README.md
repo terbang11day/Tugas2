@@ -5,6 +5,7 @@
 [Tugas 3](#tugas-3)<br/>
 [Tugas 4](#tugas-4)<br/>
 [Tugas 5](#tugas-5)<br/>
+[Tugas 6](#tugas-6)<br/>
 
 **Thariq Ziyad Al Farizi**<br/>
 **2206082865**<br/>
@@ -249,6 +250,54 @@
     *Ubah gaya tombol dengan menggunakan properti CSS seperti background-color, color, dan border.
 
     *Format elemen-elemen input form dengan menggunakan properti CSS seperti border, border-radius, dan box-shadow.
+
+# **Tugas 6**
+
+1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+
+    Synchronous programming adalah jenis pemrograman di mana instruksi dieksekusi satu per satu dalam urutan tertentu, sementara asynchronous programming memungkinkan beberapa instruksi dieksekusi secara bersamaan tanpa harus menunggu instruksi sebelumnya selesai.
+
+2. Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+
+    Paradigma event-driven programming berarti program merespons peristiwa atau kejadian tertentu, seperti klik tombol atau permintaan AJAX, dengan menjalankan fungsi yang sesuai. Contohnya, pada tugas ini, Anda menggunakan event-driven programming saat mengaktifkan modal saat tombol Add Product.
+
+3. Jelaskan penerapan asynchronous programming pada AJAX.
+
+    Penerapan asynchronous programming pada AJAX memungkinkan permintaan data ke server (seperti GET atau POST) dilakukan secara asinkron, sehingga halaman web tetap responsif dan tidak terblokir saat menunggu respons dari server.
+
+4. Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu tentang teknologi manakah yang lebih baik untuk digunakan.
+
+    Menggunakan Fetch API adalah pendekatan yang lebih modern dan lebih ringan daripada menggunakan jQuery. Ini mengurangi kebutuhan untuk mengunduh dan memasang library tambahan, sehingga mempercepat waktu pemuatan halaman. Namun, kesulitan dengan Fetch API adalah Anda perlu menulis lebih banyak kode secara manual. Penggunaan jQuery lebih sederhana tetapi memiliki overhead lebih besar. Pilihan tergantung pada kebutuhan proyek, tetapi untuk proyek-proyek modern, menggunakan Fetch API cenderung lebih disarankan.
+
+
+5.Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+    Buka berkas views.py dan tambahkan fungsi add_product_ajax. Selanjutnya, impor decorator csrf_exempt dari django.views.decorators.csrf. Lalu, beri dekorator @csrf_exempt
+
+    Membuat routing dalam berkas urls.py di dalam folder main, Anda perlu mengimpor fungsi get_product_json dan add_product_ajax, lalu menambahkan path untuk keduanya ke dalam urlpatterns
+
+    Membuat fungsi JavaScript yang akan mengambil data produk secara asinkron melalui Fetch API, tambahkan blok script di bagian bawah berkas HTML Anda dan buat fungsi JavaScript getProducts
+
+    Buat Fungsi JavaScript untuk Memperbarui Data Produk: Dalam blok script yang sama, buat fungsi refreshProducts untuk mengisi tabel dengan data produk yang diambil dari server. Panggil refreshProducts() untuk mengisi tabel saat halaman dimuat.
+
+    Membuat modal dengan sebuah form di dalamnya, Anda perlu menambahkan kode HTML yang sesuai. Pastikan form tersebut sesuai dengan model produk yang digunakan dalam aplikasi Anda. Juga, tambahkan tombol yang akan digunakan untuk menampilkan modal. 
+
+    Fungsi JavaScript bernama addProduct yang akan mengirim data produk baru ke server menggunakan Fetch API. Selanjutnya, atur tombol "Add Product" di dalam modal untuk menjalankan fungsi addProduct
+     
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
 
 
 
